@@ -1,0 +1,21 @@
+[project]
+name = "samvad"
+version = "0.1.0"
+description = "An open source toolkit that will help to train a model to convert American Sign Language (or any other sign language) into English."
+readme = "README.md"
+authors = [
+    { name = "Ank Corp", email = "hello@ankdev.me" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.1",
+    "marimo[recommended]>=0.18.4",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+samvad = "samvad.cli.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
