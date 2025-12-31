@@ -37,7 +37,7 @@ def download_youtube_video(url, filename, res, out):
     def on_progress(stream: Stream, chunk: bytes, bytes_remaining: int):
         loading_bar.max = stream.filesize
         loading_bar.index = stream.filesize - bytes_remaining
-        loading_bar.update_message_prefix(f"{stream.title[:20]}")
+        loading_bar.update_message_prefix(stream.title)
         loading_bar.next(0)
 
     def on_complete(_, __):
