@@ -1151,12 +1151,20 @@ dependencies = [
     { name = "requests" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ruff" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "click", specifier = ">=8.3.1" },
     { name = "marimo", extras = ["recommended"], specifier = ">=0.18.4" },
     { name = "requests", specifier = ">=2.32.5" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.14.10" }]
 
 [[package]]
 name = "sniffio"
