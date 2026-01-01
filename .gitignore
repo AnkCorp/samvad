@@ -160,3 +160,9 @@ __marimo__/
 .DS_Store
 desktop.ini
 __data__/
+
+*.mp3
+*.mov
+*.mp4
+*.wav
+*.ogg

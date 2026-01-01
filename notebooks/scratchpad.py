@@ -130,7 +130,7 @@ def _():
 
 @app.cell
 def _(torch):
-    print(torch.cuda.is_available())
+    print(torch.version.cuda)
     return
 
 

@@ -6,11 +6,17 @@ readme = "README.md"
 authors = [
     { name = "Ank Corp", email = "hello@ankdev.me" }
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "click>=8.3.1",
+    "faster-whisper>=1.2.1",
+    "humanize>=4.15.0",
     "marimo[recommended]>=0.18.4",
-    "requests>=2.32.5",
+    "moviepy>=2.2.1",
+    "progress>=1.6.1",
+    "pytubefix>=10.3.6",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
 ]
 
 [project.scripts]
@@ -24,3 +30,13 @@ build-backend = "hatchling.build"
 dev = [
     "ruff>=0.14.10",
 ]
+
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
